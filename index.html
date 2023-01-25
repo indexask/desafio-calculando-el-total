@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <link rel="stylesheet" href="./assets/js/script.js">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-wEmeIV1mKuiNpC+IOBjI7aAzPcEZeedi5yW5f2yOq55WWLwNGmvvx4Um1vskeMj0" crossorigin="anonymous">
+    <title>Document</title>
+</head>
+<body>
+    <div class="card" style="width: 18rem;">
+        <img src="./assets/img/675.webp" class="card-img-top" alt="">
+        <div class="card-body">
+          <h5 class="card-title">Pc gamer</h5>
+          <input id="cantidad" type="text">
+
+          <select name="colores" id=""
+           onchange="
+          document.querySelector('h3').style.backgroundColor=document.querySelector('select').value
+          "
+          >
+            <option value="blue">blue</option>
+            <option value="red">red</option>
+            <option value="yellow">yellow</option>
+
+          </select>
+          <p class="card-text" id="">Precio : $400</p>
+          <button id="" onclick="
+          entrada = Number(document.querySelector('#cantidad').value);
+          contador = Number(document.querySelector('#valor-sumado').value);
+          total = 400 * Number(entrada)
+          document.querySelector('#valor-sumado').innerHTML='Total : $'+total;
+
+          unidades = entrada
+
+          document.querySelector('#unidades').innerHTML='Cantidad : '+Number(unidades);
+
+          ">Calcular</button>
+        </div>
+      </div>
+
+
+      <div>
+        <h2 id="valor-sumado">Total:</h2>
+        <h1 id="unidades">Cantidad : </h1>
+        <h2>Color : <h3></h3> </h2>
+      </div>
+
+</body>
+</html>
